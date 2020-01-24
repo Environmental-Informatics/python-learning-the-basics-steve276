@@ -9,7 +9,7 @@ ABE65100 - ThinkPython - Excercise 3.3
 
 This program draws a 4x4 grid
 """
-# prints row separators
+# prints row dividers
 def prt_a():
     print('+ - - - -', end =" ")
     print('+ - - - -', end =" ")
@@ -32,32 +32,27 @@ def prt_b():
 
 #prt_part(prt_b)                  tests column separators
 
-# defines size of grid
-def prt_grid(f,g):
+# prints row when prt_b passed as argument
+def print_4times(f):
     f()
-    g()
-    g()
-    g()
-    g()
     f()
-    g()
-    g()
-    g()
-    g()
     f()
-    g()
-    g()
-    g()
-    g()
     f()
-    g()
-    g()
-    g()
-    g()
-    f()
-    
-# prints grid
-prt_grid(prt_a,prt_b)
+   
+# defines grid size
+def size_grid(row_div,p,row):
+    row_div()                    # row_div is row div
+    p(row)                       # p prints row
+    row_div()
+    p(row)
+    row_div()
+    p(row)
+    row_div()
+    p(row)
+    row_div()
+
+#prints grid    
+size_grid(prt_a,print_4times,prt_b)    
     
     
     
